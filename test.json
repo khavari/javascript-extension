@@ -1,0 +1,130 @@
+{
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "eJOY English"
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "css/netflix.css",
+        "css/youtube.css"
+      ],
+      "matches": [
+        "*://www.netflix.com/*",
+        "*://www.youtube.com/*",
+        "*://piay.iflix.com/*"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "all_frames": true,
+      "css": [
+        "css/hiddenElemen.css"
+      ],
+      "include_globs": [
+        "*://www.youtube.com/embed/*controls=0&start=0&origin=*"
+      ],
+      "matches": [
+        "*://www.youtube.com/embed/*"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "all_frames": true,
+      "css": [
+        "css/netflix.css",
+        "css/youtube.css"
+      ],
+      "js": [
+        "js/ejoy.bundle.js"
+      ],
+      "matches": [
+        "*://www.youtube-nocookie.com/embed/*",
+        "*://www.coursera.org/*",
+        "https://smile.amazon.ca/*",
+        "https://www.amazon.ca/*",
+        "https://smile.amazon.com/*",
+        "https://www.amazon.com/*",
+        "https://smile.amazon.co.uk/*",
+        "https://www.amazon.co.uk/*",
+        "https://www.amazon.de/*",
+        "https://www.amazon.es/*",
+        "https://www.amazon.fr/*",
+        "https://www.amazon.in/*",
+        "https://smile.amazon.it/*",
+        "https://www.amazon.it/*",
+        "*://www.udemy.com/*",
+        "*://www.primevideo.com/*",
+        "*://www.khanacademy.org/*",
+        "*://www.youtube-nocookie.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "default-src 'self'; script-src 'self' https://translate.google.com https://www.youtube.com https://www.youtube.com/iframe_api https://s.ytimg.com http://localhost:4000 https://localhost:4000 https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js https://use.fontawesome.com/releases/v5.0.13/css/all.css 'unsafe-eval'; connect-src *; font-src *; frame-src *; style-src * 'unsafe-inline' 'self' blob:; media-src *; img-src * data:;",
+  "default_locale": "en",
+  "description": "__MSG_ext_description__",
+  "externally_connectable": {
+    "matches": [
+      "*://ejoy-english.com/*",
+      "*://studify.tv/*",
+      "*://phimlearning.com/*",
+      "*://easylearning.gift/*",
+      "*://*.ejoy.ws/*"
+    ]
+  },
+  "homepage_url": "https://ejoy-english.com/",
+  "icons": {
+    "128": "img/logo/icon@3x.png",
+    "16": "img/logo/icon.png",
+    "48": "img/logo/icon@2x.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgl8emvaEzM+hMIPsN9DLG4Tc7L0VB235lK543yx5W5CspttgVVjvxfgAI+OMxrqhEJIG26SJ1nTHdSC3L3KICh5oY2i1RFBifnOxvp3DgaK3p2wcGNoQBqFl+HK0HoyGLCjKj+4afNHYDSlPvihuHPbCyUVSDyLZLbwJ3iWteBFAFD81VVTrcGn3p/LRF6tO6hoT/CKpNjGNqQblMFVksIiaX3Vhn+llvQwmgx4N+yuUxeFgvtifE7RIeIbPItbkpaBGODD727c3TqLGJfLYA3WvzO8SsGxdVd4hFbYXSXR7SyDABjjEZ0s6+lQt8y/KZBLFB/O9SpmG+a2UgKibyQIDAQAB",
+  "manifest_version": 2,
+  "name": "eJOY English - Word Master",
+  "options_page": "options/index.html",
+  "permissions": [
+    "notifications",
+    "contextMenus",
+    "identity",
+    "gcm",
+    "unlimitedStorage",
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "webRequestBlocking",
+    "storage",
+    "*://*.nflximg.com/*",
+    "*://*.nflxvideo.net/*",
+    "*://*.nflxext.com/*",
+    "*://*.netflix.com/*",
+    "*://*.nflximg.net/*",
+    "*://api.ejoy.io/*",
+    "*://translate.google.com/*",
+    "*://api.urbandictionary.com/*",
+    "*://glosbe.com/*",
+    "*://api.ejoy.io/*",
+    "*://connect.ejoy.io/*",
+    "*://youtube.com/*",
+    "\u003Call_urls>",
+    "fontSettings",
+    "http://fonts.googleapis.com/",
+    "https://fonts.googleapis.com/"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "3.1.0",
+  "web_accessible_resources": [
+    "inject.html",
+    "nfSettings.html",
+    "options/history.html",
+    "pop-ups/translation.html",
+    "/html/*",
+    "/css/*",
+    "/img/*",
+    "/lib/*"
+  ]
+}

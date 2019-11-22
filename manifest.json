@@ -1,0 +1,38 @@
+{
+  "name": "Javascript Extension",
+  "version": "1.0.0",
+  "description": "A Simple Chrome Extension in Pure JavaScript",
+  "manifest_version": 2,
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "contextMenus",
+    "identity",
+    "gcm",
+    "unlimitedStorage",
+    "tabs",
+    "webRequest",
+    "webNavigation",
+    "webRequestBlocking",
+    "storage",
+    "fontSettings"
+  ],
+  "icons": {
+    "48": "img/icon_48.png",
+    "128": "img/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "metraj",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "options_page": "options.html"
+}

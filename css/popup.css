@@ -1,0 +1,39 @@
+@font-face {
+    font-family: IranYekan-Bold;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../font/rtl/IranYekan-Bold.eot');
+    src: url('../font/rtl/IranYekan-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/rtl/IranYekan-Bold.woff') format('woff'),
+    url('../font/rtl/IranYekan-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IranYekan-Bold;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/rtl/IranYekan-Bold.eot');
+    src: url('../font/rtl/IranYekan-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/rtl/IranYekan-Bold.woff') format('woff'),
+    url('../font/rtl/IranYekan-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IranYekan;
+    font-style: normal;
+    font-weight: 100;
+    src: url('../font/rtl/IranYekan.eot');
+    src: url('../font/rtl/IranYekan.eot?#iefix') format('embedded-opentype'),
+    url('../font/rtl/IranYekan.woff') format('woff'),
+    url('../font/rtl/IranYekan.ttf') format('truetype');
+}
+
+
+body {
+    font-family: IranYekan, Verdana, Helvetica, Arial;
+}
+
+a, button, input, p, span, h1, h2, h3, h4, h5, h6 {
+    font-family: IranYekan, Verdana, Helvetica, Arial !important;
+
+}
