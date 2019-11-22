@@ -4,9 +4,6 @@
   "description": "A Simple Chrome Extension in Pure JavaScript",
   "manifest_version": 2,
   "incognito": "split",
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  },
   "permissions": [
     "activeTab",
     "notifications",
